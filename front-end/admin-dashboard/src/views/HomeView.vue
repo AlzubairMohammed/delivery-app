@@ -1,3 +1,3 @@
 <template>
-  <h1>home</h1>
+  <button class="btn btn-danger">home</button>
 </template>
