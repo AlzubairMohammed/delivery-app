@@ -1,3 +1,4 @@
-<template>
-  <button class="btn btn-danger">home</button>
-</template>
+<template> 
+<div></div>
+
+  </template>

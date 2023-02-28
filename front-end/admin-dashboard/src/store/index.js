@@ -6,6 +6,7 @@ import subSection from './subSection'
 
 export default createStore({
   state: {
+    language:true,
   },
   getters: {
   },
