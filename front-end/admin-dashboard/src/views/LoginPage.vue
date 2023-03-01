@@ -6,27 +6,27 @@
       <form action="" method="post"  class="form border rounded shadow-sm " id="form" >
   
         <div   class="form-floating mx-4  mb-2 mt-5">
-          <input type="email" class="form-control  text-center " placeholder="Email" name="email" v-model="Email" required>
-           <label :class="{'text-end':!$store.state.language}" >  
-            {{ $store.state.language ==true ? 'Email' : 'البريد الألكترني' }}
+          <input type="email" class="form-control" placeholder="Email" name="email" v-model="Email" required>
+           <label class="text-center">  
+            {{ $store.state.language ? 'Email' : 'البريد الألكترني' }}
            </label>
          </div>
           <div class="form-floating mx-4 mb-2">
-                   <input type="password" class="form-control text-center" placeholder="Password" name="pass" v-model="pass" required> 
-                   <label  placeholder="Password" :class="{'text-end':!$store.state.language}" class= "m-auto"> 
-                      {{ $store.state.language ==true ? 'Password' : 'كلمة السر' }}
+                   <input type="password" class="form-control " placeholder="Password" name="pass" v-model="pass" required> 
+                   <label  placeholder="Password" class= "m-auto text-center"> 
+                      {{ $store.state.language ? 'Password' : 'كلمة السر' }}
                     </label>
             </div>
     
             <div class="form-floating mx-4 p-0 mb-2 ">
-             <button :class="{'text-end':!$store.state.language}" class="btn btn-outline  form-control text-center bt-0 pb-1 mt-3" value="submet" >
-              {{ $store.state.language ==true ? 'Submit' : ' إدخال' }}
+             <button class="btn btn-outline  form-control text-center bt-0 pb-1 mt-3" value="submet" >
+              {{ $store.state.language ? 'Submit' : ' إدخال' }}
 
              </button>  
              </div>
           <div>
-             <h6 :class="{'text-end':!$store.state.language}" class="mb-auto text-center">
-              {{ $store.state.language ==true ? 'Or' : '  او' }}
+             <h6 class="mb-auto text-center">
+              {{ $store.state.language ? 'Or' : '  او' }}
 
              </h6>
               <div>
@@ -36,8 +36,8 @@
                </div>
                   </div>
                   
-                 <p :class="{'text-end':!$store.state.language}" class="text-center"> 
-                      {{  $store.state.language ==true ? ' Dont Have Account ?' : ' ليس لديك حساب  ' }}
+                 <p class="text-center"> 
+                      {{  $store.state.language ? ' Dont Have Account ?' : ' ليس لديك حساب  ' }}
  <a href="#"> </a></p>
                   
        </form>
@@ -54,9 +54,6 @@ export default {
 }
 </script>
 <style scope>
-div{
-  font-size: small;
-}
 button{
   color: #fff !important;
   background-color: #270330 !important;
