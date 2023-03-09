@@ -2,4 +2,15 @@
 *{
     direction: rtl;
     font-family: 'El Messiri', sans-serif;
+    letter-spacing: 2px !important;
+
+
+}
+*:focus ,*:hover{
+    
+        outline:0px !important;
+         outline-color: #fff !important;
+         border: 0 !important;
+        box-shadow: none !important;
+
 }
