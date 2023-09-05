@@ -1,15 +1,17 @@
  <template>
-    <section class="shadow-sm h-100 ms-1 position-absolute pt-5 top-50 start-0 translate-middle-y col-md-3 col-lg-2 ">
-     
-     <ul class="nav flex-column text-dark ms-1 pt-5">
+   
+      <div>
+<!--      
+     <ul class="nav text-dark  pt-5">
        <li>
-         <router-link to="/ProductsPage"  class="nav-link">
-       <i class="bi bi-house"></i> 
-       {{ $store.state.language ? ' products' : '  المنتجات  ' }} 
-     </router-link>  </li>
-   <li>
+        
+         <router-link to="/ChallengesPage"  class="nav-link">
+          <i class="bi bi-house"></i> 
+          {{ $store.state.language ? ' challenges' : '  التحديات  ' }} 
+         </router-link>  </li>
+       <li>
      <router-link to="" class="nav-link active"  href="#">
-      {{ $store.state.language ? 'customer' : '  الزبائن  ' }} 
+      {{ $store.state.language ? 'players' : '  اللاعبون  ' }} 
  </router-link>
    </li>
    <li class=" mb-5">
@@ -25,8 +27,8 @@
      </router-link>
    </li>
    
- </ul> 
- </section> 
+ </ul>  -->
+</div> 
  </template>
  <script>
 export default{
@@ -36,7 +38,7 @@ export default{
 <style scoped>
 li:hover ,li:active{
   color: #fff !important;
-  background-color:#e7f9f0cc !important;
+  background-color: var(--sec-color) !important;
   border-radius: 20px;
   box-shadow: 10px;
 }

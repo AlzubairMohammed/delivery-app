@@ -1,7 +1,7 @@
 <template>
    
-<nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top mb-5">
-    <div class="container" style="height: 40px;">
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top bg-light">
+    <div class="container-fluid" style="height: 40px;">
         <a class="navbar-brand mr-5">
           <h3> Dashbord</h3>
           <i class="bi bi-sliders text-dark"></i>
@@ -10,35 +10,44 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div  class="collapse navbar-collapse" :class="{' position-absolute top-0 end-0  rtl':!$store.state.language}" id="my-collapse">
-            <ul  class="navbar-nav me-auto" style="align-items: center" >
+            <ul  class="navbar-nav me-auto " style="align-items: center" >
                  
-                <li class="nav-item m-4"><router-link to="/">
+                <li class="nav-item m-4">
+                 <router-link to="/">
                   {{ $store.state.language ? 'Home' : '   الرئيسيه' }}
-                </router-link></li>
-                <li class="nav-item p-3"><router-link to="/LoginPage">
+                  </router-link>
+               </li>
+               <li>
+                <router-link to="/ChallengesPage"  class="nav-link">
+                 {{ $store.state.language ? ' challenges' : '  التحديات  ' }} 
+                </router-link>   
+             </li>
+             <li>
+                <router-link to="/PlayersPage"   class="nav-link">
+                 {{ $store.state.language ? 'Players' : '  اللاعبون  ' }} 
+                </router-link>   
+             </li> 
+                <li class="nav-item p-3">
+                 <router-link to="/LoginPage">
                   {{ $store.state.language ? 'login' : '    تسجيل الدخول' }}
-               </router-link></li>
- 
-               
-               <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  
-                 {{ $store.state.language ? 'lang' : ' اللغة  ' }}
+                 </router-link>
+               </li>
 
+               <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">  
+                 {{ $store.state.language ? 'lang' : ' اللغة  ' }}
                 </a>
                 <ul class="dropdown-menu">
-            <li>
-              <a type="button" class="dropdown-item text-center" @click=" $store.state.language=true">English</a>
-          </li>
-  
-            <li><hr class="dropdown-divider m-0"></li>
-            <li><a type="button" class="dropdown-item text-center" @click=" $store.state.language=false">عربي</a>
-          </li>
+                    <li>
+                    <a type="button" class="dropdown-item text-center" @click=" $store.state.language=true">English</a>
+                    </li>
+                    <li><hr class="dropdown-divider m-0"></li>
+                    <li><a type="button" class="dropdown-item text-center" @click=" $store.state.language=false">عربي</a>
+                    </li>
                  </ul>
-      
-                </li>
+              </li>
            
-              </ul>
+             </ul>
         </div>
 
     </div>
@@ -74,7 +83,7 @@ export default{
     direction: rtl;
 }
 .dropdown-item:hover, .dropdown-item:active {
-    color:  #270330 !important;
+    color:  var(--main-color) !important;
     background-color:  #fff !important;
     border-radius: 100px;
 
@@ -83,6 +92,6 @@ export default{
     --bs-dropdown-min-width:5px !important
    }
     h3{
-    color: #0a2719 
+    color:var(--main-color)
     }
 </style>

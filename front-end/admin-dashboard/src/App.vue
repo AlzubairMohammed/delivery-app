@@ -1,8 +1,9 @@
 <template>
   <div>
    <app-header></app-header>
+   <side-nav/>
     <router-view />
-  <side-nav/>
+  
   </div>
 </template>
 <script>
@@ -21,5 +22,11 @@ import AppHeader from './components/AppHeader.vue'
   text-align: center;
   text-transform:capitalize;
 } 
- 
+.dark{
+  background-color: black !important;
+}
+ :root{
+  --main-color:rgb(20, 13, 5);
+  --sec-color:rgb(245, 137, 5);
+ }
 </style>

@@ -1,15 +1,15 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProfilePage from '../views/ProfilePage.vue'
-import OrdersPage from '../views/OrdersPage.vue'
-import ProductsPage from '../views/ProductsPage.vue'
+import PlayersPage from '../views/PlayersPage.vue'
+import ChallengesPage from '../views/ChallengesPage.vue'
 import PaymentPage from '../views/PaymentPage.vue'
-import OrderDetails from '../views/OrderDetails.vue'
+import ChalengePage from '../views/ChalengePage.vue'
 import EditProduct from '../views/EditProduct.vue'
 import AddProduct from '../views/AddProduct.vue'
 import lastPayments from '../views/lastPayments.vue'
 import LoginPage from '../views/LoginPage.vue'
-
+import RegisterPage from '../views/RegisterPage.vue'
 const routes = [
   {
     path: '/',
@@ -22,19 +22,19 @@ const routes = [
     component:ProfilePage
   },
   {
-    path:"/OrdersPage",
-    name:"OrdersPage",
-    component:OrdersPage,
+    path:"/PlayersPage",
+    name:"PlayersPage",
+    component:PlayersPage,
   },
   {
-    path:"/OrderDetails",
-    name:"OrderDetails",
-    component:OrderDetails
+    path:"/ChalengePage",
+    name:"ChalengePage",
+    component:ChalengePage
   },
   {
-    path:"/ProductsPage",
-    name:"ProductsPage",
-    component:ProductsPage
+    path:"/ChallengesPage",
+    name:" challengesPage",
+    component:ChallengesPage
   },
   {
     path:"/AddProduct",
@@ -61,6 +61,12 @@ const routes = [
     name:"LoginPage",
     component:LoginPage
   }
+  ,
+  {
+    path:"/RegisterPage",
+    name:"RegisterPage",
+    component:RegisterPage
+  } 
 ]
 
 const router = createRouter({
