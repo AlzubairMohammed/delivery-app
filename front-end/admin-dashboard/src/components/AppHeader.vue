@@ -46,8 +46,13 @@
                     </li>
                  </ul>
               </li>
-           
+               
              </ul>
+             <li style="list-style: none !important;">
+                <router-link to="/ProfilePage"   class="nav-link float-end "  >
+                  <img src="" class="img-thumbnail d-block m-auto "  style="center;background-size:cover; border-radius:50%; width: 5vh; height: 5vh;" alt=" ">
+                </router-link>  
+             </li>
         </div>
 
     </div>

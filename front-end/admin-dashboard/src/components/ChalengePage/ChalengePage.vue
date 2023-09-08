@@ -29,29 +29,25 @@
             </div>
         </div>
          </div>
+       
         <!-- thetime -->
-        <div class="col-2 form-check form-switch float-end mx-2" style="width: 7% !important; display: none"  @click="Thetimes()">
+        <div class="col-2 form-check form-switch float-end mx-2" style="width: 7% !important;"  @click="Thetimes()">
         <input type="checkbox" class="form-check-input" id="in1" v-model="times">
         <label class="form-check-label" for="in1">times</label>
         </div>
  
  
        </div>
-      <div class="row mt-4 teast" style="display: none;">
-        <div class="col-2 form-check form-switch float-end mx-2" style="width: 7% !important; display: none"  @click="Thetimes()">
-        <input type="checkbox" class="form-check-input" id="in1" v-model="times">
-        <label class="form-check-label" for="in1">times</label>
-        </div>
- 
-        <div class="w-100 m-4">
-            <h3>teast</h3>
+      <div class="row mt-4 teast" style="display: none;"  :key="Quation" v-for="(Quation) in $store.state.Quations">
+        <div class="w-100 m-4" >
+            <h3>{{ Quation.Quation}}</h3>
             
         </div>
-        <ul class="list-group col-10 col-md-8 h-100 d-flex justify-content-center flex-wrap  m-auto" style="flex-direction: row;"  v-if="$store.state.language ? students=shuffle(students) : students=shuffle(students)">
+        <ul class="list-group col-10 col-md-8 h-100 d-flex justify-content-center flex-wrap  m-auto" style="flex-direction: row;"  v-if="$store.state.language ? $store.state.Quations=shuffle($store.state.Quations) : $store.state.Quations=shuffle($store.state.Quations)">
 
      <transition-group  class="d-flex justify-content-center mt-4 flex-wrap" name="item"  style="flex-direction: row;">
-     <li class="col-8 col-md-5  p-md-0 ms-2  mb-3 p-1 pb-md-2 border rounded btn shadow-sm"  :key="student" v-for="(student,index) in students" >
-     {{ index }}  {{student}} 
+     <li class="col-8 col-md-5  p-md-0 ms-2  mb-3 p-1 pb-md-2 border rounded btn shadow-sm"  :key="anser" v-for="(anser) in Quation.ansers" >
+        {{anser}} 
      </li>
       </transition-group>
      </ul>  
@@ -64,8 +60,7 @@
  export default{
         data(){
             return {
-                students:["Ahmed","Ali","Salah","Omer"],
-                times: Date()
+                 times: Date()
             }
         },
         methods:{
@@ -81,7 +76,7 @@
 
             // And swap it with the current element.
              [array[currentIndex], array[randomIndex]] =
-             [array[randomIndex], array[currentIndex]];
+             [  array[randomIndex], array[currentIndex]];
         }
 
         return array;

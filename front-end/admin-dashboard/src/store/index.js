@@ -22,6 +22,9 @@ export default createStore({
     teams:[
       {"id":"1", "name":"Doaa Osman" ,"img":"", "work":"Desing and front end","country":"sudan" },
       {"id":"2", "name":" Alzuber Mohammed"  ,"img":"", "work":"full stack and js devolaber","country":"sudan"},
+    ],
+    Quations:[
+      {"Quation":"what opacity valus", ansers:["1 , 0"," 0 , 2","0 , 1 , 2"," 1 , 2"] }
     ]
   },
   getters: {
