@@ -6,7 +6,7 @@ import subSection from './subSection'
 
 export default createStore({
   state: {
-    dark:false,
+    dark:true,
     language:true,
     activeTab:'login',
     Cards :[
@@ -24,7 +24,11 @@ export default createStore({
       {"id":"2", "name":" Alzuber Mohammed"  ,"img":"", "work":"full stack and js devolaber","country":"sudan"},
     ],
     Quations:[
-      {"Quation":"what opacity valus", ansers:["1 , 0"," 0 , 2","0 , 1 , 2"," 1 , 2"] }
+      {"Quation":"what opacity valus", ansers:["1 , 0"," 0 , 2","0 , 1 , 2"," 1 , 2"] },
+      {"Quation":"what opacity valus2", ansers:["1 , 0"," 0 , 2","0 , 1 , 2"," 1 , 2"] },
+      {"Quation":"what opacity valus3", ansers:["1 , 0"," 0 , 2","0 , 1 , 2"," 1 , 2"] },
+
+      {"Quation":"what opacity valus4", ansers:["1 , 0"," 0 , 2","0 , 1 , 2"," 1 , 2"] }
     ]
   },
   getters: {

@@ -1,12 +1,11 @@
 <template>
    
-<nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top " style="background-color: white;">
     <div class="container-fluid" style="height: 40px;">
         <a class="navbar-brand mr-5">
           <h3> Dashbord</h3>
-          <i class="bi bi-sliders text-dark"></i>
-        </a>
-        <button class="navbar-toggler border-dark m-0" data-bs-toggle="offcanvas" data-bs-target="#sidenav">
+         </a>
+        <button class="navbar-toggler m-0" data-bs-toggle="offcanvas" data-bs-target="#sidenav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div  class="collapse navbar-collapse" :class="{' position-absolute top-0 end-0  rtl':!$store.state.language}" id="my-collapse">
@@ -46,7 +45,9 @@
                     </li>
                  </ul>
               </li>
-               
+              <li class=" nav-item float-right text-dark ps-1" v-if="$store.state.dark" @click="themeMood()">  <i class=" bi bi-moon-fill text-dark"></i></li>
+              <li class=" nav-item float-right ps-1" v-else @click="themeMood()"> <i class=" bi bi-sun-fill text-dark"></i></li>
+
              </ul>
              <li style="list-style: none !important;">
                 <router-link to="/ProfilePage"   class="nav-link float-end "  >
@@ -80,7 +81,18 @@
 </template>
 <script>
 export default{
+methods:{
+    themeMood(){
 
+if(this.$store.state.dark){ 
+  
+this.$store.state.dark =false
+}
+else  
+this.$store.state.dark =true 
+}
+
+}
 }
 </script>
 <style>

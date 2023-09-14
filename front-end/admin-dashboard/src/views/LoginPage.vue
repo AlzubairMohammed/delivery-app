@@ -1,7 +1,7 @@
 <template> 
-    <div  class=" w-100 h-100 m-auto text-dark mt-5 " :class="{rtl:!$store.state.language} "> 
-      <transition name="form" class=" h-100">
-  <form class="col-sm-6 col-md-5 col-lg-4 py-4 py-sm-3 px-3 px-sm-5 border shadow-sm rounded h-75 m-auto mt-5" novalidate action="" method="get" v-if="$store.state.activeTab=='login'">
+    <div  class=" w-100 h-100 m-auto text-dark py-5 " style="height: 90vh !important;" :class="{rtl:!$store.state.language ,dark:$store.state.dark}"> 
+      <transition name="form" class=" h-75">
+  <form class="col-sm-6 col-md-5 col-lg-4 py-4 py-sm-3 px-3 px-sm-5 border shadow-sm rounded  m-auto mt-5" novalidate action="" method="get" v-if="$store.state.activeTab=='login'">
   <div class="baground h-100 py-5 px-3">
       
     <div class="form-floating mx-1 mb-2 mt-5">
@@ -63,15 +63,7 @@ form.addEventListener("submit",function (e){
 
 </script>
 <style >
-    
-      
-button:hover, button:focus{
-    color:  #fff !important;
-    background-color: var(--sec-color) !important;
-    border: 1px solid var(--sec-color) !important;
-    box-shadow: none;
-    outline-color: #fff !important;
-  } 
+     
  a {
    color:var(--main-color) !important;
    text-decoration: none !important;
@@ -79,15 +71,10 @@ button:hover, button:focus{
  a:hover{
   color: var(--sec-color) !important;
   border: 0;
- } 
- *:focus ,*:hover{
-    
-    outline:0px !important;
-   outline-color: #fff !important;
-    box-shadow: none !important;
-  
-}
- 
+ }  
+ form{
+  background-color: #fff;
+ }
 .form-floating>.form-control {
     height: calc(1.5rem + 13px) !important;
 }
@@ -101,7 +88,7 @@ button {
     padding-top:0 !important
 }
 .baground{  
-border-radius: 15% !important; 
-background-color: #150a07 !important;
+border-radius: 15px !important; 
+background-color: #000000 !important 
 }
 </style>

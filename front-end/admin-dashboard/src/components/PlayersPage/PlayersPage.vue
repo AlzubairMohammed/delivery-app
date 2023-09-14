@@ -1,5 +1,5 @@
 <template>
-    <div class="row m-4  justify-content-center mt-5 h-100">
+    <div class="row  justify-content-center py-5 h-100"  style="height: 90vh !important;" :class="{rtl:!$store.state.language ,dark:$store.state.dark}">
        <div class="mb-5">
         <input type="search" class="form-control w-50 m-auto rounded" placeholder="Search with name" v-model="search">
   

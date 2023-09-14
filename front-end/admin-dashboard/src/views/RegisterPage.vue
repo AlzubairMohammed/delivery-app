@@ -1,7 +1,7 @@
 <template> 
-    <div  class=" w-100 h-100 m-auto text-dark mt-5 " :class="{rtl:!$store.state.language} "> 
-      <transition name="form" class=" h-100">
-        <form class="col-sm-6 col-md-5 col-lg-4 py-4 py-sm-3 px-3 px-sm-5 border shadow-sm rounded h-75 m-auto mt-5" novalidate action="" method="get" v-if="$store.state.activeTab=='login'">
+    <div  class=" w-100 h-100 m-auto text-dark py-5 " style="height: 90vh !important;" :class="{rtl:!$store.state.language ,dark:$store.state.dark}"> 
+      <transition name="form" class=" h-75 m-auto">
+        <form class="col-sm-6 col-md-5 col-lg-4 py-4 py-sm-3 px-3 px-sm-5 border h-100 shadow-sm rounded h-75 m-auto " novalidate action="" method="get" v-if="$store.state.activeTab=='login'">
   <div class="baground h-100 py-5 px-3">
      
     <div class="form-floating mx-1 mb-2 mt-5">
@@ -74,8 +74,8 @@ form.addEventListener("submit",function (e){
 
 </script>
 <style>
-.baground{  
-border-radius: 15% !important; 
-background-color: #150a07 !important;
+form{
+  background-color: #fff;
 }
+ 
 </style>

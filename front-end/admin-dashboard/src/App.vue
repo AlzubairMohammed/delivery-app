@@ -24,6 +24,7 @@ import AppHeader from './components/AppHeader.vue'
 } 
 .dark{
   background-color: black !important;
+  color: white !important;
 }
  :root{
   --main-color:rgb(20, 13, 5);

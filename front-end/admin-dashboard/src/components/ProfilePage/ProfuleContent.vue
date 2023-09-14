@@ -1,7 +1,7 @@
 <template>
 
-<section class="row justify-content-center align-items-center " style="height: 55vh;" >
-         <div class="col-11 col-md-10 shadow-sm rounded-5 px-md-6 text-dark mb-4 mt-5 h-100 py-5"  > 
+<section class="row justify-content-center align-items-center " style="height: 90vh;"   :class="{rtl:!$store.state.language ,dark:$store.state.dark} ">
+         <div class="col-11 col-md-10 shadow-sm rounded-5 px-md-6 text-dark mb-4 mt-5 h-75 py-5" style="background-color: #fff" > 
            <div class="row ">
               <div class="col-5 col-md-4  border-end border-0 border-warning border-sd-0 pt-3 ">
                 <img src=" .img" class="img-thumbnail d-block m-auto"  style="center;background-size:cover; border-radius:50%; width: 100px; height: 100px;" alt=" ">

@@ -1,6 +1,6 @@
 <template>
         
-          <div class="row d-flex h-100 m-3  justify-content-center align-content-center "  :class="{rtl:!$store.state.language} ">
+          <div class="row d-flex h-100 py-5  justify-content-center align-content-center " style="height: 90vh !important;" :class="{rtl:!$store.state.language ,dark:$store.state.dark}">
              <!-- <table class="table table-hover table-bordered  table-sm d-none d-md-block ">
               <tr class="">
                 <th>
@@ -41,9 +41,9 @@
               </tr>
             </table>  -->
         <div class="col-7 col-sm-5 col-md-3 col-lg-2 shadow-sm m-2 m-lg-3 img-thumbnail p-0 h-100"  style="center;background-size:cover;   border-radius:14px" :key="card" v-for="card in $store.state.Cards">
-           <div class="cover h-100 d-flex flex-wrap justify-content-center align-content-center" >
+           <div class="cover h-100 d-flex flex-wrap justify-content-center align-content-center " >
             
-          <router-link to="/ChalengePage" class="text-dark" >  {{card.name}}</router-link>
+          <router-link to="/ChalengePage" class="text-light" >  {{card.name}}</router-link>
   
            </div>
         </div>
@@ -90,15 +90,16 @@
     transform: translate3d(5px, -20px, 5px) !important;
    
   }
-  .cover{
-    font-size: 3rem;
+  .cover  {
+     font-size: 3rem;
     border-radius: 14px !important;
     background-color: #121210cc !important;
+    }
+  .cover:hover {
+    transition: all 2s;
+     transform:  rotate3d(0, 0, 0, 359deg);
+      
 
-  }
-  .cover:hover{
-    transform:  rotate3d(0, 0, 0, 359deg);
-    background-color: #FFF !important;
-  }
+   }
   </style>
   
